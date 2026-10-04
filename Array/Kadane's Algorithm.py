@@ -28,9 +28,15 @@ maximum = float('-inf')
 
 sum = 0
 for i in range(n):
+    if sum == 0:
+        start = i
     sum += nums[i]
-    maximum = max(maximum, sum)
+    if maximum < sum:
+        AnsStart, AnsEnd = start, i
+        maximum = sum
     if sum < 0:
         sum = 0
+        
 print("maximum :",maximum)
+print("Maximum subArray :",nums[AnsStart:AnsEnd+1])
     
