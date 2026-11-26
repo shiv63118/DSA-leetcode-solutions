@@ -1,3 +1,4 @@
+# LeetCode 1234. Replace the Substring for Balanced String
 class Solution:
     def balancedString(self, s):
         n = len(s)
